@@ -90,25 +90,6 @@ public class MainPage {
     }
 
     @Step
-    /*public boolean getHeaderLinks(){
-        List<WebElement> headerLinks = new ArrayList<>();
-
-        headerLinks.add(headerWines);
-        headerLinks.add(headerWhereToBuy);
-        headerLinks.add(headerCocktails);
-        headerLinks.add(headerOurStory);
-        headerLinks.add(headerFaqs);
-        headerLinks.add(headerContactUs);
-        headerLinks.add(headerCountrySelect);
-
-        for (WebElement item: headerLinks) {
-            if (!item.isDisplayed()) {
-                return false;
-            }
-        }
-        return true;
-    }*/
-
     public ElementsCollection getHeaderLinks(){
         return headerLinks;
     }

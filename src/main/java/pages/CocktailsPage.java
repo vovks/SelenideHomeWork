@@ -44,27 +44,6 @@ public class CocktailsPage {
         selectRedWineCocktails.click();
     }
 
-    /*public boolean getListOfCocktailsRecipes(){
-        List<WebElement> wineRecipes = new ArrayList<>();
-
-        boolean isAllNotShown = true;
-        wineRecipes.add(findMulledWineRecipe);
-        wineRecipes.add(findRedWineSpritzerRecipe);
-        wineRecipes.add(findChocolateFondueRecipe);
-        wineRecipes.add(findYellowTailshakeRecipe);
-        wineRecipes.add(findRedHotChocolateRecipe);
-        wineRecipes.add(findWinterRedSpritzRecipe);
-        wineRecipes.add(findVeryBerrySlushieRecipe);
-
-        for (WebElement item: wineRecipes) {
-            if (!item.isDisplayed()) {
-                isAllNotShown = false;
-                return isAllNotShown;
-            }
-        };
-
-            return isAllNotShown;
-    }*/
     @Step
     public ElementsCollection getListOfCocktailsRecipes(){
         return recipes;
