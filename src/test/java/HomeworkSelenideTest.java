@@ -7,10 +7,10 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;;
 
 
-public class HomeworkSelenide extends SelenideRunner{
+public class HomeworkSelenideTest extends SelenideRunner{
     @Test
     //Case 1: Welcome page: all required elements are displayed
-    public void navigationWelcomePageElements() {
+    public void navigationWelcomePageElementsTest() {
         WelcomePage welcomePage = open(Constants.BASIC_URL, WelcomePage.class);
 
         welcomePage.getConfirmationText().shouldHave(text("I am of legal drinking age in"));
@@ -22,7 +22,7 @@ public class HomeworkSelenide extends SelenideRunner{
 
     @Test
     //Case 2: Welcome page: navigate to main page as European customer
-    public void navigationWelcomePageEurope() {
+    public void navigationWelcomePageEuropeTest() {
         WelcomePage welcomePage = open(Constants.BASIC_URL, WelcomePage.class);
         MainPage mainPage = welcomePage.welcomePageIsPassed();
 
@@ -31,7 +31,7 @@ public class HomeworkSelenide extends SelenideRunner{
 
     @Test
     //Case 3: Main page: all required elements are displayed
-    public void navigationMainPageElements() {
+    public void navigationMainPageElementsTest() {
         WelcomePage welcomePage = open(Constants.BASIC_URL, WelcomePage.class);
         MainPage mainPage = welcomePage.welcomePageIsPassed();
 
@@ -45,7 +45,7 @@ public class HomeworkSelenide extends SelenideRunner{
 
     @Test
     //Case 4: Main page: Menu button logic (open header)
-    public void verifyingHeaderOpening() {
+    public void verifyingHeaderOpeningTest() {
         WelcomePage welcomePage = open(Constants.BASIC_URL, WelcomePage.class);
         MainPage mainPage = welcomePage.welcomePageIsPassed();
 
@@ -62,7 +62,7 @@ public class HomeworkSelenide extends SelenideRunner{
 
     @Test
     //Case 5: Main page: Menu button logic (close header)
-    public void verifyingHeaderClosing() {
+    public void verifyingHeaderClosingTest() {
         WelcomePage welcomePage = open(Constants.BASIC_URL, WelcomePage.class);
         MainPage mainPage = welcomePage.welcomePageIsPassed();
 
@@ -75,7 +75,7 @@ public class HomeworkSelenide extends SelenideRunner{
 
     @Test
     //Case 6: Main page: Global Nav logic
-    public void navigateToChina() {
+    public void navigateToChinaTest() {
         WelcomePage welcomePage = open(Constants.BASIC_URL, WelcomePage.class);
         MainPage mainPage = welcomePage.welcomePageIsPassed();
         mainPage.clickElementMenu();
@@ -88,7 +88,7 @@ public class HomeworkSelenide extends SelenideRunner{
 
     @Test
     //Case 7: Main page: Global Nav logic (CHINA - separate site is open)
-    public void navigationChinaWeiboTab() {
+    public void navigationChinaWeiboTabTest() {
         //driver.manage().deleteAllCookies();
         WelcomePage welcomePage = open(Constants.BASIC_URL, WelcomePage.class);
         MainPage mainPage = welcomePage.welcomePageIsPassed();
@@ -114,7 +114,7 @@ public class HomeworkSelenide extends SelenideRunner{
 
     @Test
     //Case 8: Where to buy: enter valid postal code
-    public void navigateToStores() {
+    public void navigateToStoresTest() {
         WelcomePage welcomePage = open(Constants.BASIC_URL, WelcomePage.class);
         MainPage mainPage = welcomePage.welcomePageIsPassed();
         mainPage.clickElementMenu();
@@ -128,7 +128,7 @@ public class HomeworkSelenide extends SelenideRunner{
 
     @Test
     //Case 9: Cocktails: Select one wine
-    public void navigationCocktails() {
+    public void navigationCocktailsTest() {
         WelcomePage welcomePage = open(Constants.BASIC_URL, WelcomePage.class);
         MainPage mainPage = welcomePage.welcomePageIsPassed();
         mainPage.clickElementMenu();
@@ -146,7 +146,7 @@ public class HomeworkSelenide extends SelenideRunner{
 
     @Test
     //Case 10: Cocktails: Navigate to Cocktail recipe page
-    public void navigationCocktailRecipe() {
+    public void navigationCocktailRecipeTest() {
         WelcomePage welcomePage = open(Constants.BASIC_URL, WelcomePage.class);
         MainPage mainPage = welcomePage.welcomePageIsPassed();
         mainPage.clickElementMenu();
@@ -159,7 +159,7 @@ public class HomeworkSelenide extends SelenideRunner{
 
     @Test
     //Case 11: Cocktails: Select several wines
-    public void navigationSeveralWineCocktail() {
+    public void navigationSeveralWineCocktailTest() {
         WelcomePage welcomePage = open(Constants.BASIC_URL, WelcomePage.class);
         MainPage mainPage = welcomePage.welcomePageIsPassed();
         mainPage.clickElementMenu();
